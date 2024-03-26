@@ -27,7 +27,7 @@ def add_user():
          _hashed_password = generate_password_hash(_password)
          id = mongo.db.user.insert_one({'name':_name,'email':_email,'pwd':_hashed_password})
          response  = jsonify("user add succesfully")
-         response.staust_code = 200
+         response.status_code = 200
          return response
      else :
          return not_found()
